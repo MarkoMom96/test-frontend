@@ -3,8 +3,6 @@ import './App.css'
 import Navigation from './components/Navigation'
 
 function App() {
-	const [count, setCount] = useState(0)
-
 	useEffect(() => {
 		fetch(
 			'https://dknhmgstb7daepfpievifqg7te0vaknw.lambda-url.eu-central-1.on.aws?' +
@@ -17,7 +15,7 @@ function App() {
 			.then(data => console.log(data))
 	}, [])
 	return (
-		<div className='w-2/3 mx-auto'>
+		<div className='w-full 2xl:w-2/3 mx-auto'>
 			<Navigation />
 		</div>
 	)

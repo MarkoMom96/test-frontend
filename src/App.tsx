@@ -15,8 +15,10 @@ function App() {
 			.then(data => console.log(data))
 	}, [])
 	return (
-		<div className='w-full 2xl:w-2/3 mx-auto'>
-			<Navigation />
+		<div className='min-w-fit w-full 2xl:w-2/3 mx-auto'>
+			<header className='p-2 lg:pt-10'>
+				<Navigation />
+			</header>
 		</div>
 	)
 }

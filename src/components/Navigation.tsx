@@ -1,39 +1,78 @@
+import React, { useState } from 'react'
 import ListItem from './ListItem'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { GiCancel } from 'react-icons/gi'
 
 const Navigation = () => {
-	const mainMenuItems: string[] = Array(8).fill('lorem ipsum')
+	const mainMenuItems = [
+		{ name: 'MenuLink1', id: 1, link: '/' },
+		{ name: 'MenuLink2', id: 2, link: '/' },
+		{ name: 'MenuLink3', id: 3, link: '/' },
+		{ name: 'MenuLink4', id: 4, link: '/' },
+		{ name: 'MenuLink5', id: 5, link: '/' },
+		{ name: 'MenuLink6', id: 6, link: '/' },
+		{ name: 'MenuLink7', id: 7, link: '/' },
+		{ name: 'MenuLink8', id: 8, link: '/' },
+	]
+
+	const [showMenu, setShowMenu] = useState(false)
+	const showMenuClickHandler = () => {
+		setShowMenu(last => !last)
+	}
 
 	return (
-		<header className='mt-7 p-2'>
-			<nav className='mb-9'>
-				<ul className='text-lg flex justify-end items-center'>
-					<ListItem tailwind='mr-auto hover:bg-white'>
-						<img src='../../public/Logo.png' alt='LOGO' />
-					</ListItem>
-					<ListItem>
-						<a href='#1'>Lorem ipsum</a>
-					</ListItem>
-					<ListItem>
-						<a href='#2'>Lorem ipsum</a>
-					</ListItem>
-					<ListItem>
-						<a href='#3'>Lorem ipsum</a>
-					</ListItem>
-					<ListItem>
-						<a href='#4'>Lorem ipsum</a>
-					</ListItem>
-				</ul>
-			</nav>
-			<nav>
-				<ul className=' ml-auto text-sm 2xl:text-xl flex w-fit justify-end items-center border-blue-300 border-2'>
-					{mainMenuItems.map(item => (
+		<React.Fragment>
+			<div className='flex justify-between items-center'>
+				<img src='../../Logo.png' />
+				<nav className=''>
+					<ul className='text-lg hidden lg:flex justify-end'>
 						<ListItem>
-							<a href='#'>Lorem ipsum</a>
+							<a href='#1'>Lorem ipsum</a>
+						</ListItem>
+						<ListItem>
+							<a href='#2'>Lorem ipsum</a>
+						</ListItem>
+						<ListItem>
+							<a href='#3'>Lorem ipsum</a>
+						</ListItem>
+						<ListItem>
+							<a href='#4'>Lorem ipsum</a>
+						</ListItem>
+					</ul>
+					<button
+						className='lg:hidden text-lg font-bold'
+						onClick={showMenuClickHandler}
+					>
+						{showMenu ? (
+							<GiCancel className='text-3xl' />
+						) : (
+							<GiHamburgerMenu className='text-3xl' />
+						)}
+					</button>
+					{showMenu ? (
+						<ul
+							className='lg:hidden absolute flex flex-col items-end right-1 top-15 p-3 w-fit rounded
+							 bg-slate-200 border-2 border-blue-400 animate-load origin-top'
+						>
+							{mainMenuItems.map(item => (
+								<ListItem key={item.id}>
+									<a href={item.link}>{item.name}</a>
+								</ListItem>
+							))}
+						</ul>
+					) : null}
+				</nav>
+			</div>
+			<nav>
+				<ul className='hidden ml-auto text-sm 2xl:text-xl lg:flex w-fit justify-end items-center border-blue-300 border-2'>
+					{mainMenuItems.map(item => (
+						<ListItem key={item.id}>
+							<a href={item.link}>{item.name}</a>
 						</ListItem>
 					))}
 				</ul>
 			</nav>
-		</header>
+		</React.Fragment>
 	)
 }
 

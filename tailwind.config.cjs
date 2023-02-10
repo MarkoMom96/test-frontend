@@ -3,6 +3,13 @@ module.exports = {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			dropShadow: {
+				custom: [
+					'1px 1px rgb(96 165 250)',
+					'2px 2px rgb(96 165 250)',
+					'3px 3px rgb(96 165 250)',
+				],
+			},
 			keyframes: {
 				load: {
 					'0%': { transform: 'scale(0)' },

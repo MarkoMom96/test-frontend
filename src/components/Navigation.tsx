@@ -22,7 +22,7 @@ const Navigation = () => {
 
 	return (
 		<React.Fragment>
-			<div className='flex justify-between items-center'>
+			<div className='flex justify-between items-center mb-10'>
 				<img src='../../Logo.png' />
 				<nav className=''>
 					<ul className='text-lg hidden lg:flex justify-end'>
@@ -51,7 +51,7 @@ const Navigation = () => {
 					</button>
 					{showMenu ? (
 						<ul
-							className='lg:hidden absolute flex flex-col items-end right-1 top-15 p-3 w-fit rounded
+							className='lg:hidden absolute flex flex-col items-end right-2 top-15 p-3 w-fit rounded
 							 bg-slate-200 border-2 border-blue-400 animate-load origin-top'
 						>
 							{mainMenuItems.map(item => (
@@ -64,7 +64,7 @@ const Navigation = () => {
 				</nav>
 			</div>
 			<nav>
-				<ul className='hidden ml-auto text-sm 2xl:text-xl lg:flex w-fit justify-end items-center border-blue-300 border-2'>
+				<ul className='hidden ml-auto text-xl lg:flex w-fit justify-end items-center border-blue-300 border-2 border-b-0 max-w-full'>
 					{mainMenuItems.map(item => (
 						<ListItem key={item.id}>
 							<a href={item.link}>{item.name}</a>

@@ -3,6 +3,9 @@ module.exports = {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			backgroundImage: {
+				bgImage: "url('public/Background.png')",
+			},
 			dropShadow: {
 				custom: [
 					'1px 1px rgb(96 165 250)',

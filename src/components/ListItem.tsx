@@ -6,7 +6,7 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<'li'> {
 const ListItem: React.FC<ListItemProps> = ({ children, tailwind, ...rest }) => {
 	return (
 		<li
-			className={`inline px-2 py-2 hover:bg-blue-200 transition-colors duration-200 cursor-pointer ${tailwind}`}
+			className={`dark:text-white dark:hover:bg-blue-700 inline px-2 py-2 hover:bg-blue-200 transition-colors duration-200 cursor-pointer ${tailwind}`}
 			{...rest}
 		>
 			{children}

@@ -16,12 +16,54 @@ function App() {
 			.then(data => console.log(data))
 	}, [])
 	return (
-		<div className='w-[1080px] relative mx-auto'>
+		<div className='lg:w-[1080px] mx-auto'>
 			<header className='px-5 pt-5 lg:px-0 lg:pt-8'>
 				<Navigation />
 			</header>
 			<main>
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-0 mx-auto max-w-fit'>
+					<Card
+						imagePath='../Picture1.png'
+						tag='hash-tag'
+						title='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum'
+						desc='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						linkHref='/'
+					/>
+					<Card
+						imagePath='../Picture1.png'
+						tag='hash-tag'
+						title='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum'
+						desc='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						linkHref='/'
+					/>
+					<Card
+						imagePath='../Picture1.png'
+						tag='hash-tag'
+						title='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum'
+						desc='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						linkHref='/'
+					/>
+					<Card
+						imagePath='../Picture1.png'
+						tag='hash-tag'
+						title='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum'
+						desc='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						linkHref='/'
+					/>
+					<Card
+						imagePath='../Picture1.png'
+						tag='hash-tag'
+						title='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum'
+						desc='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						linkHref='/'
+					/>
+					<Card
+						imagePath='../Picture1.png'
+						tag='hash-tag'
+						title='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum'
+						desc='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						linkHref='/'
+					/>
 					<Card
 						imagePath='../Picture1.png'
 						tag='hash-tag'
@@ -56,6 +98,11 @@ function App() {
 					/>
 				</div>
 			</main>
+			<footer className='bg-slate-200 p-7 text-center dark:bg-gray-800 dark:text-white'>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ducimus
+				repellendus. Sit numquam repudiandae, eum porro qui repellat commodi
+				ipsam earum incidunt sequi itaque est quibusdam odit culpa magni animi.
+			</footer>
 		</div>
 	)
 }

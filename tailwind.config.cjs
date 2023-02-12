@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			backgroundImage: {
-				bgImage: "url('public/Background.png')",
+				bgImage: "url('/Background.png')",
 			},
 			dropShadow: {
 				custom: [

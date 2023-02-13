@@ -30,7 +30,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = props => {
 			</button>
 			{showMenu ? (
 				<ul
-					className='lg:hidden absolute flex flex-col items-end right-2 top-16 p-3 w-fit rounded
+					className='lg:hidden absolute flex flex-col items-end right-1 top-16 p-3 w-fit rounded
            bg-slate-200 dark:bg-slate-700 dark:text-white border-2 border-blue-400 animate-load origin-top'
 				>
 					{props.items.map(item => (

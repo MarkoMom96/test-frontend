@@ -1,4 +1,4 @@
-import { ThemeContext } from '../context/ThemeContext'
+import { ThemeContext } from '../../context/ThemeContext'
 import { useContext } from 'react'
 import { BsFillMoonFill } from 'react-icons/bs'
 import { BsFillSunFill } from 'react-icons/bs'
